@@ -7,5 +7,5 @@ issues. The stdlib `log/syslog` cannot be imported on Windows systems, and witho
 conditional compilation this adds complications.
 
 Instead, `gsyslog` provides a very simple wrapper around `log/syslog` but returns
-a runtime error if attempting to initialize on a non Linux or OSX system.
+a dummy writer that writes to log on a non Linux or OSX system.
 
